@@ -10,5 +10,5 @@
 
 ```
 usage:
-         python3 ARl-Finger-ADD.py https://192.168.1.1:5003/ admin password
+         python ARl-Finger-ADD.py -E https://192.168.1.1:5003/ admin password
 ```
