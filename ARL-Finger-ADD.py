@@ -142,16 +142,22 @@ if __name__ == '__main__':
         flag = ""
         if len(sys.argv) != 1:
             if sys.argv[1] == "-E":
+                print("[Info] Input Ehole fingerprint")
                 flag = "Ehole"
             elif sys.argv[1] == "-O":
+                print("[Info] Input ObserverWard fingerprint")
                 flag = "ObserverWard"
             else:
                 banner()
 
             login_url = sys.argv[2]
+            if login_url[-1] != '/':
+                login_url = login_url + '/'
+            print(login_url)
             login_name = sys.argv[3]
             login_password = sys.argv[4]
 
+            print("[Info] Try Login")
             # login
             str_data = {"username": login_name, "password": login_password}
             login_data = json.dumps(str_data)
